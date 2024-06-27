@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            padding-top: 50px; /* Padding to move content down from the top */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Increased margin for better spacing */
+        }
+        .form-control, .btn {
+            border-color: #dc3545; /* Red border color */
+            color: #dc3545; /* Red text color */
+        }
+        .form-control:focus, .btn:focus {
+            border-color: #dc3545; /* Red focus border color */
+            box-shadow: 0 0 0 0.2rem rgba(220,53,69,.5); /* Red focus box shadow */
+        }
+        .btn-primary {
+            background-color: #dc3545; /* Red background color */
+            border-color: #dc3545; /* Red border color */
+        }
+        .btn-primary:hover {
+            background-color: #c82333; /* Darker red on hover */
+            border-color: #c82333; /* Darker red border on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+                <div class="invalid-feedback">Name is required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                <div class="invalid-feedback">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                <div class="invalid-feedback">Password is required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+                <select class="form-control" id="hobbies">
+                    <option value="reading">Reading</option>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

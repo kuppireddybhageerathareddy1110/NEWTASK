@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Date and Time</title>
+    <style>
+        /* Optional: Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+        #datetime {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Date and Time Display</h1>
+    <div id="datetime"></div>
+    <div style="margin-top: 20px;">
+        <button onclick="showDate()">Show Date</button>
+        <button onclick="showTime()">Show Time</button>
+    </div>
+
+    <!-- Include JavaScript for date and time -->
+    <script>
+        function showDate() {
+            var currentDate = new Date();
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var dateStr = currentDate.toLocaleDateString('en-GB', options);
+            document.getElementById('datetime').textContent = "Current Date: " + dateStr;
+        }
+
+        function showTime() {
+            var currentTime = new Date();
+            var timeStr = currentTime.toString();
+            document.getElementById('datetime').textContent = "Current Time: " + timeStr;
+        }
+    </script>
+</body>
+</html>
